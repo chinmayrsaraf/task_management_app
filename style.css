@@ -1,0 +1,198 @@
+/* style.css */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif; /* xAI-inspired font */
+    line-height: 1.6;
+    background-color: #1A1A1A; /* Dark gray background */
+    color: #FFFFFF; /* White text */
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #242424; /* Slightly lighter dark gray for card */
+    border-radius: 8px; /* Sharp but subtle corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow for depth */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #00D4B8; /* Teal accent for title */
+    font-size: 2.5em;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+#taskForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+    background-color: #2A2A2A; /* Darker form background */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+input, textarea {
+    padding: 12px;
+    border: 1px solid #404040; /* Subtle gray border */
+    border-radius: 4px;
+    background-color: #333333; /* Dark input background */
+    color: #FFFFFF; /* White text */
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #00D4B8; /* Teal focus state */
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 212, 184, 0.5); /* Teal glow */
+}
+
+input::placeholder, textarea::placeholder {
+    color: #A0A0A0; /* Light gray placeholder */
+}
+
+button {
+    padding: 12px 24px;
+    background-color: #00D4B8; /* Teal primary color */
+    color: #1A1A1A; /* Dark text for contrast */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #00BFA5; /* Slightly darker teal */
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.filter-controls {
+    margin-bottom: 30px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.filter-btn {
+    background-color: #404040; /* Neutral dark gray */
+    color: #FFFFFF;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: #00D4B8; /* Teal on hover */
+    color: #1A1A1A;
+    transform: translateY(-2px);
+}
+
+.task-item {
+    border: 1px solid #404040; /* Subtle gray border */
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    background-color: #2A2A2A; /* Dark task background */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.task-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Stronger shadow */
+}
+
+.task-item h3 {
+    color: #FFFFFF; /* White task title */
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.task-item p {
+    color: #A0A0A0; /* Light gray description */
+}
+
+.task-actions {
+    margin-top: 15px;
+    display: flex;
+    gap: 12px;
+}
+
+.task-actions button {
+    padding: 8px 16px;
+    font-size: 0.9em;
+}
+
+.task-actions button:nth-child(1) { /* Complete/Undo button */
+    background-color: #00D4B8; /* Teal for completion */
+}
+
+.task-actions button:nth-child(1):hover {
+    background-color: #00BFA5;
+}
+
+.task-actions button:nth-child(2) { /* Edit button */
+    background-color: #A0A0A0; /* Gray for edit */
+    color: #1A1A1A;
+}
+
+.task-actions button:nth-child(2):hover {
+    background-color: #8C8C8C;
+}
+
+.task-actions button:nth-child(3) { /* Delete button */
+    background-color: #FF4D4D; /* Red for delete */
+    color: #FFFFFF;
+}
+
+.task-actions button:nth-child(3):hover {
+    background-color: #E63939;
+}
+
+.completed {
+    background-color: #2E3D3D; /* Dark teal-green for completed */
+    border-color: #00D4B8; /* Teal border */
+}
+
+.completed h3 {
+    text-decoration: line-through;
+    color: #00D4B8; /* Teal strikethrough */
+}
+
+.completed p {
+    color: #A0A0A0;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+        margin: 20px;
+    }
+    
+    #taskForm {
+        gap: 10px;
+        padding: 15px;
+    }
+    
+    button {
+        padding: 10px 20px;
+    }
+    
+    .task-item {
+        padding: 15px;
+    }
+}
