@@ -49,6 +49,7 @@ Integrate with a backend for user authentication and task synchronization.
 
 Author
 Chinmay Saraf 
+Try it here : https://chinmayrsaraf.github.io/task_management_app/
 
 
 
